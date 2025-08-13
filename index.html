@@ -15,174 +15,312 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  
+  <style>
+    /* Enhanced responsive styles */
+    .main-content {
+      padding: 2rem 0;
+    }
+    
+    .profile-image {
+      margin-bottom: clamp(1rem, 3vw, 2rem);
+    }
+    
+    .bio-section {
+      margin-top: clamp(1rem, 3vw, 2rem);
+      text-align: justify;
+      line-height: 1.6;
+    }
+    
+    .contact-info {
+      margin-top: clamp(1rem, 2vw, 1.5rem);
+    }
+    
+    .name-header {
+      font-family: 'Oswald', sans-serif; 
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    }
+    
+    .links-section {
+      margin-top: clamp(1rem, 2vw, 1.5rem);
+    }
+    
+    .publications-section {
+      margin-top: clamp(2rem, 5vw, 3rem);
+      padding-bottom: clamp(2rem, 5vw, 3rem);
+    }
+    
+    .publications-section h2 {
+      margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    }
+    
+    .publication-category {
+      margin: clamp(1.5rem, 3vw, 2rem) 0;
+    }
+    
+    .publication-item {
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+      line-height: 1.5;
+    }
+    
+    .publication-links a {
+      margin-right: 0.5rem;
+    }
+    
+    /* Responsive adjustments for different screen sizes */
+    @media (max-width: 768px) {
+      .main-content {
+        padding: 1rem 0;
+      }
+      
+      .bio-section {
+        margin-top: 1rem;
+      }
+      
+      .contact-info, .links-section {
+        margin-top: 1.5rem;
+      }
+      
+      .publications-section {
+        margin-top: 2rem;
+      }
+    }
+    
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .bio-section {
+        margin-top: 2rem;
+      }
+      
+      .publications-section {
+        margin-top: 2.5rem;
+      }
+    }
+    
+    @media (min-width: 1201px) {
+      .bio-section {
+        margin-top: 3rem;
+      }
+      
+      .publications-section {
+        margin-top: 3rem;
+      }
+    }
+    
+    /* Improved spacing for publication lists */
+    .publications-section ul {
+      padding-left: 1.2rem;
+    }
+    
+    .publications-section li {
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    }
+    
+    /* Better link styling */
+    .text-black-600 {
+      color: #374151;
+      text-decoration: none;
+    }
+    
+    .text-black-600:hover {
+      text-decoration: underline;
+      color: #1f2937;
+    }
+    
+    .text-blue-600 {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    
+    .text-blue-600:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+  </style>
 </head>
 <body>
 
-
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <!-- <li><a href="#">Projects</a></li> -->
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="Curriculum Vitae Paul.pdf">CV</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 45vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="img/photo2.jpg" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-                  Dr. Sun is a Postdoctoral Scholar in the <a href="https://bioengineering.stanford.edu/" class="text-black-600 hover:underline">Department of Bioengineering</a> at <a href="http://www.stanford.edu/" class="text-black-600 hover:underline">Stanford University</a>, 
-                  working under the mentorship of <a href="https://biox.stanford.edu/people/emma-lundberg" class="text-black-600 hover:underline">Dr. Emma Lundberg</a>. He earned his Ph.D. in <a href="http://cbd.cmu.edu/" class="text-black-600 hover:underline">Computational Biology</a> at <a href="http://www.cmu.edu/" class="text-black-600 hover:underline">Carnegie Mellon University</a>, 
-                  advised by <a href="http://murphylab.web.cmu.edu/" class="text-black-600 hover:underline">Dr. Robert F Murphy</a>. <br>
-                  His research interests span computational biology, biostatistics, and statistical learning. 
-                  Dr. Sun's current work focuses on developing image-derived generative models of biological systems across multiple scales, from cellular to tissue levels. 
-                  These models are designed to characterize organizational variations across different regions and individuals. 
-                  Additionally, Dr. Sun maintains an active interest in the theoretical foundations of modern machine learning systems.
-
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sgans-serif; font-size: 32px;"><b>Huangqingbo (Paul) Sun</b></div><br>
-                <p><b>sunh at stanford edu</b><br>
-                <p>Department of Bioengineering<br>
-                Stanford University<br>
-                443 Via Ortega<br>
-                Stanford, CA 94305<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://scholar.google.com/citations?user=6f1FRVIAAAAJ">Google Scholar</a></dd> 
-              <!-- <dd><a href="#">Twitter</a></dd> -->
-              <dd><a href="https://www.linkedin.com/in/huangqingbo-sun-7197a1194/">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-12" style="height: 150vh;">    
-                <h2 id="publications">Publications</h2>
-                ⁺ equal contribution, * corresponding author<br/>  
-                <strong>Preprints</strong><br/>
-                <ul>
-                  <li>
-                    <strong>Intrinsic Diversity in Primary Cilia Revealed Through Spatial Proteomics</strong><br>
-                    Jan Hansen, <strong>Huangqingbo Sun</strong>⁺, Konstantin Kahnert⁺, Alexandra Johannesson, Kalliopi Tzavlaki, Casper Winsnes, Emmie Pohjahnen, 
-                    Jennny Fall, Mathias Uhlen, Ulrika Axelsson, Frederic Ballllosera Navarro, Anna Backstrom, Cecilia Lindskog, Fredric Johansson, Kalle von Feilitzen, 
-                    Angelica Delgado Vega, Anna Martinez Casals, Diana Mahdessian, Anna Lindstrand, Eini Westenius, Emma Lundberg*<br>
-                    bioRxiv (2024).<br>
-                    <a href="https://www.biorxiv.org/content/10.1101/2024.10.20.619273v1" class="text-blue-600 hover:underline">[paper]</a>
-                  </li>
-                </ul>
-                
-                <ul>
-                  <li>
-                    <strong>Flexible and robust cell type annotation for highly multiplexed tissue images</strong><br>
-                    <strong>Huangqingbo Sun</strong>, Shiqiu Yu, Anna Martinez Casals, Anna Bäckström, Yuxin Lu, Cecilia Lindskog, Emma Lundberg*, Robert F Murphy*<br>
-                    bioRxiv (2024).<br>
-                    <a href="https://www.biorxiv.org/content/10.1101/2024.09.12.612510v1" class="text-blue-600 hover:underline">[paper]</a>
-                    <a href="https://github.com/sun-huangqingbo/multiplexed-image-annotator" class="text-blue-600 hover:underline">[software]</a>
-                  </li>
-                </ul>
-            
-                <strong>Peer-reviewed papers</strong><br/>
-                <ul>
-                  <li>
-                    <strong>Expanding the coverage of spatial proteomics: a machine learning approach</strong><br>
-                    <strong>Huangqingbo Sun</strong>, Jiayi Li, Robert F Murphy*<br>
-                    Bioinformatics, 40, no. 2 (2024): btae062.<br>
-                    <a href="https://academic.oup.com/bioinformatics/article/40/2/btae062/7600423" class="text-blue-600 hover:underline">[paper]</a>
-                    <a href="https://github.com/murphygroup/CODEXPanelOptimization" class="text-blue-600 hover:underline">[software]</a>
-                  </li>
-                </ul>
-
-                <ul>
-                  <li>
-                    <strong>Basal body organization and cell geometry during the cell cycle in Tetrahymena thermophila</strong><br>
-                    <strong>Huangqingbo Sun</strong>, Adam Soh, Lisa Mitchell, Chad Pearson, and Robert F. Murphy*<br>
-                    Molecular Biology of the Cell, 34, no. 6 (2023): ar53.<br>
-                    <a href="https://www.molbiolcell.org/doi/10.1091/mbc.E22-11-0508" class="text-blue-600 hover:underline">[paper]</a>
-                    <a href="https://github.com/murphygroup/TetAlyze" class="text-blue-600 hover:underline">[software]</a>
-                  </li>
-                  
-                  <li>
-                    <strong>Improving and evaluating deep learning models of cellular organization</strong><br>
-                    <strong>Huangqingbo Sun</strong>⁺, Xuecong Fu⁺, Serena Abraham, Shen Jin, and Robert F. Murphy*<br>
-                    Bioinformatics, 38, no. 23 (2022): 5299-5306.<br>
-                    <a href="https://doi.org/10.1093/bioinformatics/btac688" class="text-blue-600 hover:underline">[paper]</a>
-                    <a href="https://murphylab.cbd.cmu.edu/Software/2022_insilico/" class="text-blue-600 hover:underline">[software]</a>
-                  </li>
-
-                  <li>
-                    <strong>Evaluation of categorical matrix completion algorithms: toward improved active learning for drug discovery</strong><br>
-                    <strong>Huangqingbo Sun</strong>, and Robert F. Murphy*<br>
-                    Bioinformatics, 37, no. 20 (2021): 3538-3545.<br>
-                    <a href="https://academic.oup.com/bioinformatics/article/37/20/3538/6275258" class="text-blue-600 hover:underline">[paper]</a>
-                    <a href="http://murphylab.web.cmu.edu/software/2021_categorical/" class="text-blue-600 hover:underline">[software]</a>
-                  </li>
-
-                  <li>
-                    <strong>An Improved Matrix Completion Algorithm For Categorical Variables: Application to Active Learning of Drug Responses</strong><br>
-                    <strong>Huangqingbo Sun</strong>, and Robert F. Murphy*<br>
-                    ICML 2020 Workshop on Real World Experiment Design and Active Learning, (2020).<br>
-                    <a href="https://realworldml.github.io/files/cr/15_SunAndMurphyRevised.pdf" class="text-blue-600 hover:underline">[paper]</a>
-                  </li>
-
-                  <li>
-                    <strong>A MEMS variable optical attenuator with ultra-low wavelength-dependent loss and polarization-dependent loss</strong><br>
-                    <strong>Huangqingbo Sun</strong>, Wei Zhou, Zijing Zhang, and Robert F. Murphy*<br>
-                    Micromachines, 9, no. 12 (2018): 632.<br>
-                    <a href="https://www.mdpi.com/2072-666X/9/12/632" class="text-blue-600 hover:underline">[paper]</a>                    
-                  </li>
-                  
-                </ul>
-
-                <strong>Book chapters & technical reports</strong><br/>
-                <ul>
-                  <li>
-                    <strong>Learning Morphological, Spatial, and Dynamic Models for Cellular and Subcellular Components</strong><br>
-                    <strong>Huangqingbo Sun</strong>, and Robert F. Murphy*<br>
-                    Imaging Cell Signaling, Methods in Molecular Biology, 2800. Humana, New York, NY.<br>
-                  </li>  
-            </div>
-
-            
-        </div>
-
-
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="#">Projects</a></li> -->
+        <li><a href="#publications">Publications</a></li> 
+        <li><a href="Curriculum Vitae Paul.pdf">CV</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container main-content">
+  <div class="row">
+
+    <!-- Entries Column -->
+    <div class="col-md-8">
+      
+      <!-- Main Image -->
+      <img class="img-responsive profile-image" src="img/photo2.jpg" alt="Huangqingbo Sun">
+      
+      <div class="bio-section">                
+        Dr. Sun is a Postdoctoral Scholar in the <a href="https://bioengineering.stanford.edu/" class="text-black-600">Department of Bioengineering</a> at <a href="http://www.stanford.edu/" class="text-black-600">Stanford University</a>, 
+        working under the mentorship of <a href="https://biox.stanford.edu/people/emma-lundberg" class="text-black-600">Dr. Emma Lundberg</a>. He earned his Ph.D. in <a href="http://cbd.cmu.edu/" class="text-black-600">Computational Biology</a> at <a href="http://www.cmu.edu/" class="text-black-600">Carnegie Mellon University</a>, 
+        advised by <a href="http://murphylab.web.cmu.edu/" class="text-black-600">Dr. Robert F Murphy</a>.<br><br>
+        His research interests span computational biology, biostatistics, and statistical learning. 
+        Dr. Sun's current work focuses on developing image-derived generative models of biological systems across multiple scales, from cellular to tissue levels. 
+        These models are designed to characterize organizational variations across different regions and individuals. 
+        Additionally, Dr. Sun maintains an active interest in the theoretical foundations of modern machine learning systems.
+      </div>
+    </div> 
+
+    <!-- Contact Info on the Sidebar -->
+    <div class="col-md-4">
+      <div class="name-header"><b>Huangqingbo (Paul) Sun</b></div>
+      <div class="contact-info">
+        <p><b>sunh at stanford edu</b></p>
+        <p>Department of Bioengineering<br>
+        Stanford University<br>
+        443 Via Ortega<br>
+        Stanford, CA 94305</p>
+      </div>
+      
+      <!-- Links on the Sidebar -->
+      <div class="links-section">
+        <dd><a href="https://scholar.google.com/citations?user=6f1FRVIAAAAJ" class="text-blue-600">Google Scholar</a></dd> 
+        <!-- <dd><a href="#">Twitter</a></dd> -->
+        <dd><a href="https://www.linkedin.com/in/huangqingbo-sun-7197a1194/" class="text-blue-600">LinkedIn</a></dd>
+      </div>
+    </div>
+  </div>
+
+  <!-- Publications -->
+  <div class="row">
+    <div class="col-md-12 publications-section">    
+      <h2 id="publications">Publications</h2>
+      <p>⁺ equal contribution, * corresponding author</p>
+      
+      <div class="publication-category">
+        <strong>Preprints</strong>
+        <ul>
+          <li class="publication-item">
+            <strong>NA</strong><br>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="publication-category">
+        <strong>Peer-reviewed papers</strong>
+        <ul>
+          <li class="publication-item">
+            <strong>Intrinsic Diversity in Primary Cilia Revealed Through Spatial Proteomics</strong><br>
+            Jan Hansen, <strong>Huangqingbo Sun</strong>⁺, Konstantin Kahnert⁺, Alexandra Johannesson, Kalliopi Tzavlaki, Casper Winsnes, Emmie Pohjahnen, 
+            Jennny Fall, Mathias Uhlen, Ulrika Axelsson, Frederic Ballllosera Navarro, Anna Backstrom, Cecilia Lindskog, Fredric Johansson, Kalle von Feilitzen, 
+            Angelica Delgado Vega, Anna Martinez Casals, Diana Mahdessian, Anna Lindstrand, Eini Westenius, Emma Lundberg*<br>
+            Cell, in press (2024).<br>
+            <div class="publication-links">
+              <a href="https://www.biorxiv.org/content/10.1101/2024.10.20.619273v1" class="text-blue-600">[paper]</a>
+            </div>
+          </li>
+          
+          <li class="publication-item">
+            <strong>Flexible and robust cell type annotation for highly multiplexed tissue images</strong><br>
+            <strong>Huangqingbo Sun</strong>, Shiqiu Yu, Anna Martinez Casals, Anna Bäckström, Yuxin Lu, Cecilia Lindskog, Matthew Ruffalo, Emma Lundberg*, Robert F Murphy*<br>
+            Cell Systems, in press (2024).<br>
+            <div class="publication-links">
+              <a href="https://www.biorxiv.org/content/10.1101/2024.09.12.612510v1" class="text-blue-600">[paper]</a>
+              <a href="https://github.com/sun-huangqingbo/multiplexed-image-annotator" class="text-blue-600">[software]</a>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <strong>Expanding the coverage of spatial proteomics: a machine learning approach</strong><br>
+            <strong>Huangqingbo Sun</strong>, Jiayi Li, Robert F Murphy*<br>
+            Bioinformatics, 40, no. 2 (2024): btae062.<br>
+            <div class="publication-links">
+              <a href="https://academic.oup.com/bioinformatics/article/40/2/btae062/7600423" class="text-blue-600">[paper]</a>
+              <a href="https://github.com/murphygroup/CODEXPanelOptimization" class="text-blue-600">[software]</a>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <strong>Basal body organization and cell geometry during the cell cycle in Tetrahymena thermophila</strong><br>
+            <strong>Huangqingbo Sun</strong>, Adam Soh, Lisa Mitchell, Chad Pearson, and Robert F. Murphy*<br>
+            Molecular Biology of the Cell, 34, no. 6 (2023): ar53.<br>
+            <div class="publication-links">
+              <a href="https://www.molbiolcell.org/doi/10.1091/mbc.E22-11-0508" class="text-blue-600">[paper]</a>
+              <a href="https://github.com/murphygroup/TetAlyze" class="text-blue-600">[software]</a>
+            </div>
+          </li>
+          
+          <li class="publication-item">
+            <strong>Improving and evaluating deep learning models of cellular organization</strong><br>
+            <strong>Huangqingbo Sun</strong>⁺, Xuecong Fu⁺, Serena Abraham, Shen Jin, and Robert F. Murphy*<br>
+            Bioinformatics, 38, no. 23 (2022): 5299-5306.<br>
+            <div class="publication-links">
+              <a href="https://doi.org/10.1093/bioinformatics/btac688" class="text-blue-600">[paper]</a>
+              <a href="https://murphylab.cbd.cmu.edu/Software/2022_insilico/" class="text-blue-600">[software]</a>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <strong>Evaluation of categorical matrix completion algorithms: toward improved active learning for drug discovery</strong><br>
+            <strong>Huangqingbo Sun</strong>, and Robert F. Murphy*<br>
+            Bioinformatics, 37, no. 20 (2021): 3538-3545.<br>
+            <div class="publication-links">
+              <a href="https://academic.oup.com/bioinformatics/article/37/20/3538/6275258" class="text-blue-600">[paper]</a>
+              <a href="http://murphylab.web.cmu.edu/software/2021_categorical/" class="text-blue-600">[software]</a>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <strong>An Improved Matrix Completion Algorithm For Categorical Variables: Application to Active Learning of Drug Responses</strong><br>
+            <strong>Huangqingbo Sun</strong>, and Robert F. Murphy*<br>
+            ICML 2020 Workshop on Real World Experiment Design and Active Learning, (2020).<br>
+            <div class="publication-links">
+              <a href="https://realworldml.github.io/files/cr/15_SunAndMurphyRevised.pdf" class="text-blue-600">[paper]</a>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <strong>A MEMS variable optical attenuator with ultra-low wavelength-dependent loss and polarization-dependent loss</strong><br>
+            <strong>Huangqingbo Sun</strong>, Wei Zhou, Zijing Zhang, and Robert F. Murphy*<br>
+            Micromachines, 9, no. 12 (2018): 632.<br>
+            <div class="publication-links">
+              <a href="https://www.mdpi.com/2072-666X/9/12/632" class="text-blue-600">[paper]</a>
+            </div>                  
+          </li>
+        </ul>
+      </div>
+
+      <div class="publication-category">
+        <strong>Book chapters & technical reports</strong>
+        <ul>
+          <li class="publication-item">
+            <strong>Learning Morphological, Spatial, and Dynamic Models for Cellular and Subcellular Components</strong><br>
+            <strong>Huangqingbo Sun</strong>, and Robert F. Murphy*<br>
+            Imaging Cell Signaling, Methods in Molecular Biology, 2800. Humana, New York, NY.
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container -->
+
+<!-- Other people may like it too! -->
+<a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+
+</body>
 </html>
