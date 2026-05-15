@@ -1,1 +1,0 @@
-# Plain-Academic Template
