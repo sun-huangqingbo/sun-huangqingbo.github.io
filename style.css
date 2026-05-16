@@ -371,8 +371,10 @@ main {
 }
 
 .pub-tag {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-style: italic;
+  font-weight: 300;
   color: var(--ink-light);
   white-space: nowrap;
 }
