@@ -16,6 +16,7 @@
     <a href="index.html">About</a>
     <a href="publications.html" class="active">Publications</a>
     <a href="Curriculum Vitae Paul.pdf">CV</a>
+    <a href="Curriculum Vitae Paul Chinese.pdf">简历</a>
   </nav>
 </header>
 
@@ -44,11 +45,22 @@
     </div>
     <p class="pub-note">⁺ equal contribution &nbsp;·&nbsp; * corresponding author</p>
 
+    <!-- Filter bar -->
+    <div class="filter-bar" id="filterBar">
+      <span class="filter-label">Topic</span>
+      <button class="filter-btn all-btn active" data-tag="all">All</button>
+      <button class="filter-btn" data-tag="deep-learning">Deep learning</button>
+      <button class="filter-btn" data-tag="statistical-learning">Statistical learning</button>
+      <button class="filter-btn" data-tag="cell-imaging">Cell imaging</button>
+      <button class="filter-btn" data-tag="cell-biology">Cell biology</button>
+      <button class="filter-btn" data-tag="experimental-design">Experimental design</button>
+    </div>
+
     <!-- Preprints -->
-    <div class="pub-group">
+    <div class="pub-group" id="group-preprint">
       <div class="pub-group-label">Preprint</div>
 
-      <div class="pub">
+      <div class="pub" data-tags="deep-learning cell-imaging">
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <div class="pub-title">Generative machine learning unlocks the first proteome-wide image of human cells</div>
@@ -61,15 +73,19 @@
             <a class="pub-link" href="https://www.biorxiv.org/content/10.64898/2026.03.31.715748v1">paper</a>
             <a class="pub-link" href="https://github.com/CellProfiling/ProtiCelli">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">deep learning</span>
+            <span class="pub-tag">cell imaging</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Peer-reviewed -->
-    <div class="pub-group">
+    <div class="pub-group" id="group-peer">
       <div class="pub-group-label">Peer-reviewed</div>
 
-      <div class="pub">
+      <div class="pub" data-tags="cell-biology cell-imaging">
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <div class="pub-title">Big1 is a cell-cycle regulator linking cell size to basal body number in Tetrahymena thermophila</div>
@@ -78,14 +94,18 @@
             Gayatri L. Dholakia, Vikram Raju, Jay R. Hesselberth, J. Matthew Taliaferro, Robert F. Murphy,
             Lydia R. Heasley, Chad G. Pearson*
           </div>
-          <div class="pub-venue">Current Biology, 36(7): 1882–1891.e4</div>
+          <div class="pub-venue">Current Biology, 36(7): 1882-1891.e4</div>
           <div class="pub-links">
             <a class="pub-link" href="https://www.cell.com/current-biology/fulltext/S0960-9822(26)00252-6">paper</a>
+          </div>
+          <div class="pub-tags">
+            <span class="pub-tag">cell biology</span>
+            <span class="pub-tag">cell imaging</span>
           </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="cell-imaging cell-biology">
         <div class="pub-year">2025</div>
         <div class="pub-body">
           <div class="pub-title">Intrinsic Diversity in Primary Cilia Revealed Through Spatial Proteomics</div>
@@ -96,15 +116,19 @@
             Angelica M Delgado-Vega, Anna Martinez Casals, Diana Mahdessian, Mathias Uhlén, Shu-Hsien Sheu,
             Anna Lindstrand, Ulrika Axelsson, Emma Lundberg*
           </div>
-          <div class="pub-venue">Cell, 188(24): 6804–6824</div>
+          <div class="pub-venue">Cell, 188(24): 6804-6824</div>
           <div class="pub-links">
             <a class="pub-link" href="https://www.cell.com/cell/fulltext/S0092-8674(25)01029-3">paper</a>
             <a class="pub-link" href="https://github.com/CellProfiling/HPA_Cilia_Study_Code">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">cell imaging</span>
+            <span class="pub-tag">cell biology</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="deep-learning cell-imaging">
         <div class="pub-year">2025</div>
         <div class="pub-body">
           <div class="pub-title">Flexible and robust cell type annotation for highly multiplexed tissue images</div>
@@ -117,10 +141,14 @@
             <a class="pub-link" href="https://www.cell.com/cell-systems/fulltext/S2405-4712(25)00207-8">paper</a>
             <a class="pub-link" href="https://github.com/sun-huangqingbo/multiplexed-image-annotator">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">deep learning</span>
+            <span class="pub-tag">cell imaging</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="statistical-learning cell-imaging experimental-design">
         <div class="pub-year">2024</div>
         <div class="pub-body">
           <div class="pub-title">Expanding the coverage of spatial proteomics: a machine learning approach</div>
@@ -132,10 +160,15 @@
             <a class="pub-link" href="https://academic.oup.com/bioinformatics/article/40/2/btae062/7600423">paper</a>
             <a class="pub-link" href="https://github.com/murphygroup/CODEXPanelOptimization">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">statistical learning</span>
+            <span class="pub-tag">cell imaging</span>
+            <span class="pub-tag">experimental design</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="cell-biology cell-imaging statistical-learning">
         <div class="pub-year">2023</div>
         <div class="pub-body">
           <div class="pub-title">Basal body organization and cell geometry during the cell cycle in Tetrahymena thermophila</div>
@@ -147,40 +180,53 @@
             <a class="pub-link" href="https://www.molbiolcell.org/doi/10.1091/mbc.E22-11-0508">paper</a>
             <a class="pub-link" href="https://github.com/murphygroup/TetAlyze">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">cell biology</span>
+            <span class="pub-tag">cell imaging</span>
+            <span class="pub-tag">statistical learning</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="deep-learning cell-imaging">
         <div class="pub-year">2022</div>
         <div class="pub-body">
           <div class="pub-title">Improving and evaluating deep learning models of cellular organization</div>
           <div class="pub-authors">
             <strong>Huangqingbo Sun</strong>⁺, Xuecong Fu⁺, Serena Abraham, Shen Jin, Robert F. Murphy*
           </div>
-          <div class="pub-venue">Bioinformatics, 38(23): 5299–5306</div>
+          <div class="pub-venue">Bioinformatics, 38(23): 5299-5306</div>
           <div class="pub-links">
             <a class="pub-link" href="https://doi.org/10.1093/bioinformatics/btac688">paper</a>
             <a class="pub-link" href="https://murphylab.cbd.cmu.edu/Software/2022_insilico/">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">deep learning</span>
+            <span class="pub-tag">cell imaging</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="statistical-learning experimental-design">
         <div class="pub-year">2021</div>
         <div class="pub-body">
           <div class="pub-title">Evaluation of categorical matrix completion algorithms: toward improved active learning for drug discovery</div>
           <div class="pub-authors">
             <strong>Huangqingbo Sun</strong>, Robert F. Murphy*
           </div>
-          <div class="pub-venue">Bioinformatics, 37(20): 3538–3545</div>
+          <div class="pub-venue">Bioinformatics, 37(20): 3538-3545</div>
           <div class="pub-links">
             <a class="pub-link" href="https://academic.oup.com/bioinformatics/article/37/20/3538/6275258">paper</a>
             <a class="pub-link" href="http://murphylab.web.cmu.edu/software/2021_categorical/">software</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">statistical learning</span>
+            <span class="pub-tag">experimental design</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="statistical-learning experimental-design">
         <div class="pub-year">2020</div>
         <div class="pub-body">
           <div class="pub-title">An Improved Matrix Completion Algorithm for Categorical Variables: Application to Active Learning of Drug Responses</div>
@@ -191,10 +237,14 @@
           <div class="pub-links">
             <a class="pub-link" href="https://realworldml.github.io/files/cr/15_SunAndMurphyRevised.pdf">paper</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">statistical learning</span>
+            <span class="pub-tag">experimental design</span>
+          </div>
         </div>
       </div>
 
-      <div class="pub">
+      <div class="pub" data-tags="experimental-design">
         <div class="pub-year">2018</div>
         <div class="pub-body">
           <div class="pub-title">A MEMS variable optical attenuator with ultra-low wavelength-dependent loss and polarization-dependent loss</div>
@@ -205,15 +255,18 @@
           <div class="pub-links">
             <a class="pub-link" href="https://www.mdpi.com/2072-666X/9/12/632">paper</a>
           </div>
+          <div class="pub-tags">
+            <span class="pub-tag">experimental design</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Book chapters -->
-    <div class="pub-group">
+    <div class="pub-group" id="group-book">
       <div class="pub-group-label">Book chapters &amp; technical reports</div>
 
-      <div class="pub">
+      <div class="pub" data-tags="cell-imaging statistical-learning">
         <div class="pub-year"></div>
         <div class="pub-body">
           <div class="pub-title">Learning Morphological, Spatial, and Dynamic Models for Cellular and Subcellular Components</div>
@@ -221,11 +274,76 @@
             <strong>Huangqingbo Sun</strong>, Robert F. Murphy*
           </div>
           <div class="pub-venue">Imaging Cell Signaling — Methods in Molecular Biology, 2800. Humana, New York, NY</div>
+          <div class="pub-tags">
+            <span class="pub-tag">cell imaging</span>
+            <span class="pub-tag">statistical learning</span>
+          </div>
         </div>
       </div>
     </div>
+
+    <p class="no-results" id="noResults">No publications match the selected topic.</p>
   </main>
 </div>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const pubs = document.querySelectorAll('.pub');
+  const groups = document.querySelectorAll('.pub-group');
+  const noResults = document.getElementById('noResults');
+
+  let active = new Set();
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag;
+
+      if (tag === 'all') {
+        active.clear();
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      } else {
+        document.querySelector('.all-btn').classList.remove('active');
+        if (active.has(tag)) {
+          active.delete(tag);
+          btn.classList.remove('active');
+        } else {
+          active.add(tag);
+          btn.classList.add('active');
+        }
+        if (active.size === 0) {
+          document.querySelector('.all-btn').classList.add('active');
+        }
+      }
+
+      applyFilter();
+    });
+  });
+
+  function applyFilter() {
+    let anyVisible = false;
+
+    pubs.forEach(pub => {
+      if (active.size === 0) {
+        pub.classList.remove('hidden');
+        anyVisible = true;
+      } else {
+        const tags = (pub.dataset.tags || '').split(' ');
+        const match = [...active].some(t => tags.includes(t));
+        pub.classList.toggle('hidden', !match);
+        if (match) anyVisible = true;
+      }
+    });
+
+    // Hide group headers when all their pubs are hidden
+    groups.forEach(group => {
+      const visible = group.querySelectorAll('.pub:not(.hidden)').length > 0;
+      group.style.display = visible ? '' : 'none';
+    });
+
+    noResults.classList.toggle('visible', !anyVisible);
+  }
+</script>
 
 </body>
 </html>
